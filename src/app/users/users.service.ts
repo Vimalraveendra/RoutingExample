@@ -1,6 +1,6 @@
 
 export class UserService{
-    users:{id:number,name:string}[] = [
+   private users:{id:number,name:string}[] = [
         {
           id: 1,
           name: 'Boss'
@@ -15,5 +15,7 @@ export class UserService{
         }
       ];
 
-    
+    getUsers(){
+        return this.users;
+    }
 }
