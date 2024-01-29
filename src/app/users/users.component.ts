@@ -8,10 +8,10 @@ import { UserService } from './users.service';
   providers:[UserService]
 })
 export class UsersComponent implements OnInit {
-   users:{id:number,name:string}[];
+    users:{id:number,name:string}[];
   constructor(private  userService:UserService){}
   ngOnInit() {
-      this.users=this.userService.users;
+      this.users=this.userService.getUsers();
   }
 
 }
