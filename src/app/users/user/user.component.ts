@@ -12,7 +12,6 @@ user:{id:number,name:string}
 paramSubscription:Subscription
 constructor(private route:ActivatedRoute){}
 ngOnInit() {
-
     this.user={
       id:this.route.snapshot.params['userId'],
       name:this.route.snapshot.params['name'] 
