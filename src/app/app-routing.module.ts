@@ -11,6 +11,7 @@ import { ServerComponent } from './servers/server/server.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from "./auth-guard.service";
+import { canDeactivateGuard } from "./servers/edit-server/can-deactivate-guard.service";
 
 
 const appRoutes:Routes=[
@@ -20,7 +21,7 @@ const appRoutes:Routes=[
     canActivateChild:[AuthGuard],
      component:ServersComponent,children:[
       {path:':serverId',component:ServerComponent},
-      {path:':serverId/edit',component:EditServerComponent},
+      {path:':serverId/edit',component:EditServerComponent ,canDeactivate:[(component:EditServerComponent)=>component.canDeactivate()]},
     ]},
     {path:'users',component:UsersComponent ,children:[
       {path:':userId/:name',component:UserComponent},
