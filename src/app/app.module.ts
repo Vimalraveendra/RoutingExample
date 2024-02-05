@@ -14,8 +14,7 @@ import { ServerComponent } from './servers/server/server.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './auth.service';
-import { canDeactivateGuard } from './servers/edit-server/can-deactivate-guard.service';
-import { AuthGuard } from './auth-guard.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 
 
@@ -28,7 +27,8 @@ import { AuthGuard } from './auth-guard.service';
     UserComponent,
     EditServerComponent,
     ServerComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
